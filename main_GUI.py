@@ -41,6 +41,7 @@ class MainWindow(QMainWindow):
         self.ui.checkBox.stateChanged.connect(self.checkbox_function)
         self.ui.spin_numLED.setSuffix("km")
         self.ui.spin_numLED.setPrefix("$")
+        # self.ui.slider_brightness.setDisabled(True)
         # self.ui.progressBar.setFormat("%p%")
         # self.ui.progressBar.setTextVisible(True)
         # self.ui.progressBar.setInvertedAppearance(True)
