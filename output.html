@@ -1,0 +1,173 @@
+<h1 id="colorlightgreentip"><span
+class="math inline">${\color{lightgreen}Tip}$</span></h1>
+<ol type="1">
+<li>Color: http://ingiacong.co/bang-code-mau/</li>
+<li>Icon: https://icons8.com/, https://www.flaticon.com/ # <span
+class="math inline">${\color{lightgreen}QPushButton}$</span></li>
+</ol>
+<h2 id="colorlightbluecommand"><span
+class="math inline">${\color{lightblue}Command}$</span></h2>
+<ul>
+<li><p>Set clicked connect to function:
+self.ui.btn_name.clicked.connect.(function);</p></li>
+<li><p>Ẩn nút: button.hide()</p></li>
+<li><p>Hiển thị nút: button.show()</p></li>
+<li><p>Vô hiệu hóa nút:button.setDisabled(True)</p></li>
+<li><p>Kích hoạt: button.setEnabled(True)</p></li>
+<li><p>Đặt gợi ý: button.setToolTip(“Nhấn vào nút này”)</p></li>
+<li><p>Đặt icon: button.setIcon(QIcon(“icon.png”))</p></li>
+<li><p>Đặt phím tắt cho nút: button.setShortcut(“Ctrl+N”)</p></li>
+<li><p>Đặt kiểu CSS cho nút: button.setStyleSheet(“background-color:
+green; color: white”)</p></li>
+<li><p>delay 2s:</p>
+<ul>
+<li>import time</li>
+<li>time.sleep(2)</li>
+</ul></li>
+</ul>
+<p><img src="button.jpg" alt="markdown" /> # <span
+class="math inline">${\color{lightgreen}QText, QLineEdit,
+QLabel}$</span> ## <span
+class="math inline">${\color{lightblue}QText}$</span> + setText(text):
+Đặt văn bản hiển thị trong phần nội dung của QText (ví dụ: QLabel,
+QLineEdit).</p>
+<ul>
+<li><p>text(): Lấy nội dung hiện tại của QText.</p></li>
+<li><p>setPlaceholderText(text): Đặt văn bản gợi ý (placeholder text)
+cho QText (chỉ áp dụng cho QLineEdit). Gợi ý này xuất hiện khi QLineEdit
+rỗng.</p></li>
+<li><p>clear(): Xóa toàn bộ nội dung của QText.</p></li>
+<li><p>setEnabled(enabled): Vô hiệu hóa hoặc kích hoạt QText (hoặc tương
+tự) dựa trên giá trị enabled.</p></li>
+</ul>
+<p><img src="label.png" alt="markdown" /> ## <span
+class="math inline">${\color{lightblue}QLineEdit}$</span><br />
++ setText(text): Đặt văn bản cho QLineEdit.</p>
+<ul>
+<li><p>text(): Lấy văn bản hiện tại của QLineEdit.</p></li>
+<li><p>setPlaceholderText(text): Đặt văn bản gợi ý (placeholder text)
+cho QLineEdit. Gợi ý này xuất hiện khi QLineEdit rỗng.</p></li>
+<li><p>clear(): Xóa nội dung của QLineEdit.</p></li>
+<li><p>selectAll(): Chọn toàn bộ văn bản trong QLineEdit.</p></li>
+<li><p>setMaxLength(maxLength): Đặt giới hạn độ dài tối đa của văn bản
+mà người dùng có thể nhập vào QLineEdit.</p></li>
+<li><p>setReadOnly(True/False): Đặt QLineEdit là chỉ đọc (read-only)
+hoặc có thể chỉnh sửa.</p></li>
+<li><p>setValidator(QValidator): Đặt một bộ kiểm tra (validator) để kiểm
+tra và hạn chế văn bản mà người dùng có thể nhập vào QLineEdit.</p></li>
+</ul>
+<p><img src="lineedit.png" alt="markdown" /> ## <span
+class="math inline">${\color{lightblue}QLabel}$</span> + setText(text):
+Đặt văn bản hiển thị trong QLabel.</p>
+<ul>
+<li><p>text(): Lấy nội dung hiện tại của QLabel.</p></li>
+<li><p>setPixmap(pixmap): Đặt hình ảnh (QPixmap) để hiển thị trong
+QLabel.</p>
+<pre>
+label.setPixmap(QPixmap("image.png"))
+</pre></li>
+<li><p>setAlignment(alignment): Đặt căn chỉnh của văn bản hoặc hình ảnh
+trong QLabel. Ví dụ: Qt.AlignCenter, Qt.AlignRight, Qt.AlignTop,
+v.v.</p>
+<pre>
+label.setAlignment(Qt.AlignCenter)
+</pre></li>
+<li><p>setStyleSheet(style): Đặt kiểu (style) CSS cho QLabel để tùy
+chỉnh giao diện.</p>
+<pre>
+label.setStyleSheet("background-color: yellow; color: blue;")
+</pre></li>
+<li><p>setOpenExternalLinks(True/False): Cho phép hoặc tắt mở các liên
+kết ngoài (URL) khi bạn bấm vào liên kết trong văn bản QLabel.</p></li>
+</ul>
+<p><img src="label.png" alt="markdown" /> # <span
+class="math inline">${\color{lightgreen}QCheckBox}$</span> +
+setText(text): Đặt văn bản hiển thị bên cạnh ô kiểm tra.</p>
+<ul>
+<li><p>text(): Lấy văn bản hiện tại của QCheckBox.</p></li>
+<li><p>isChecked(): Kiểm tra xem ô kiểm tra đã được chọn hay
+chưa.</p></li>
+<li><p>setChecked(True/False): Đặt trạng thái của ô kiểm tra. Nếu bạn
+truyền True, nó sẽ được chọn; nếu bạn truyền False, nó sẽ không được
+chọn.</p></li>
+<li><p>toggle(): Chuyển đổi trạng thái của ô kiểm tra, tức là nếu nó đã
+được chọn, nó sẽ trở thành không được chọn và ngược lại.</p></li>
+</ul>
+<p><img src="checkbox.gif" alt="markdown" /> # <span
+class="math inline">${\color{lightgreen}QSpin}$</span> +
+setValue(value): Đặt giá trị số nguyên hiển thị trong QSpinBox.</p>
+<ul>
+<li><p>value(): Lấy giá trị số nguyên hiện tại của QSpinBox.</p></li>
+<li><p>setMinimum(minimum): Đặt giá trị tối thiểu mà người dùng có thể
+chọn.</p>
+<pre>
+spinbox.setMinimum(0)
+</pre></li>
+<li><p>setMaximum(maximum): Đặt giá trị tối đa mà người dùng có thể
+chọn.</p>
+<pre>
+spinbox.setMaximum(100)
+</pre></li>
+<li><p>setSingleStep(step): Đặt bước tăng/giảm giá trị khi người dùng sử
+dụng các nút tăng/giảm giá trị.</p>
+<pre>
+spinbox.setSingleStep(5)
+</pre></li>
+<li><p>setSuffix(suffix): Đặt một hậu tố (suffix) cho giá trị hiển thị
+trong QSpinBox.</p>
+<pre>
+spinbox.setSuffix(" km")
+</pre></li>
+<li><p>setPrefix(prefix): Đặt một tiền tố (prefix) cho giá trị hiển thị
+trong QSpinBox.</p>
+<pre>
+spinbox.setPrefix("$")
+</pre></li>
+</ul>
+<p><img src="spin.png" alt="markdown" /> # <span
+class="math inline">${\color{lightgreen}QSlider}$</span> +
+setValue(value): Đặt giá trị số nguyên hiển thị trong QSlider.</p>
+<ul>
+<li><p>value(): Lấy giá trị số nguyên hiện tại của QSlider.</p></li>
+<li><p>setMinimum(minimum): Đặt giá trị tối thiểu mà người dùng có thể
+chọn.</p>
+<pre>
+slider.setMinimum(0)
+</pre></li>
+<li><p>setMaximum(maximum): Đặt giá trị tối đa mà người dùng có thể
+chọn.</p>
+<pre>
+slider.setMaximum(100)
+</pre></li>
+<li><p>setSingleStep(step): Đặt bước tăng/giảm giá trị khi người dùng di
+chuyển thanh trượt hoặc sử dụng các nút bên cạnh.</p>
+<pre>
+slider.setSingleStep(5)
+</pre></li>
+<li><p>setTickInterval(interval): Đặt khoảng cách giữa các đánh dấu trên
+thanh trượt.</p>
+<pre>
+#Đặt khoảng cách giữa các đánh dấu trên thanh trượt: 
+slider.setTickInterval(10)
+</pre></li>
+<li><p>setOrientation(orientation): Đặt hướng của thanh trượt (ngang
+hoặc dọc).</p>
+<pre>
+#Đặt hướng của thanh trượt (ngang): 
+slider.setOrientation(Qt.Horizontal)
+</pre></li>
+<li><p>setSliderPosition(position):</p>
+<pre>
+#Đặt vị trí của con trượt trên thanh trượt:
+slider.setSliderPosition(25)
+</pre></li>
+<li><p>valueChanged(function)Kết nối sự kiện thay đổi giá trị của thanh
+trượt</p>
+<pre>
+slider.valueChanged.connect(function)
+</pre></li>
+</ul>
+<figure>
+<img src="slider.jpg" alt="markdown" />
+<figcaption aria-hidden="true">markdown</figcaption>
+</figure>

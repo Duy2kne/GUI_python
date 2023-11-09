@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>icon/icons8-home-64.png</file>
+    <file>icon/icons8-manual-64.png</file>
+    <file>icon/icons8-setting-64.png</file>
+    <file>icon/led_off.png</file>
+    <file>icon/led_on.png</file>
+    <file>icon/icons8-off.png</file>
+    <file>icon/icons8-on.png</file>
+  </qresource>
+</RCC>
