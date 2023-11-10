@@ -1,0 +1,13 @@
+tạo ra các checkbox spin slider combox  4  nút nhấn A, 3 label, 1 lineEdit, progressBar
+
+1 stacked widget 3 page 
+
+Nếu có checked của checkbox thì cho phép chỉnh slider
+
+nhập từ bàn phím lineEdit tiến hành nhấn nút A để add ComboBox với item là dữ liệu ở lineEdit
+
+3 label hiển thị:
++ giá trị spin
++ giá trị slider
++ hiện thị giá trị hiện tại combobox
+
