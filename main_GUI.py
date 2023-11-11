@@ -57,6 +57,7 @@ class MainWindow(QMainWindow):
         self.ui.btn_led.clicked.connect(self.button)
         self.ui.btn_led.setToolTip("TURN ON/OFF LED")
         self.ui.slider_brightness.valueChanged.connect(self.slider)
+        self.ui.slider_brightness.setSliderPosition(10)
         self.ui.spin_numLED.valueChanged.connect(self.spin)
         self.ui.label_8.setText("LED: 0")
         self.ui.btn_home.clicked.connect(self.page)
@@ -66,6 +67,7 @@ class MainWindow(QMainWindow):
         self.ui.checkBox.stateChanged.connect(self.checkbox_function)
         self.ui.spin_numLED.setSuffix("km")
         self.ui.spin_numLED.setPrefix("$")
+<<<<<<< HEAD
         self.ui.slider_brightness.setDisabled(False)
         self.ui.btn_connect.clicked.connect(self.connect_Function)
         self.ui.btn_diconnect.clicked.connect(self.disconnectFunction)
@@ -81,8 +83,13 @@ class MainWindow(QMainWindow):
         self.ui.get_inf.clicked.connect(self.addRow)
         # self.ui.progressBar.setFormat("%p%")
         # self.ui.progressBar.setTextVisible(True)
+=======
+        self.ui.comboBox.addItem("Option 1", 1)
+        # self.ui.slider_brightness.setDisabled(True)
+        self.ui.progressBar.setFormat("%p%")
+        # self.ui.progressBar.setTextVisible(False)
+>>>>>>> d56ab5fd5d2653ed50693bbdb80b9e49ecc31940
         # self.ui.progressBar.setInvertedAppearance(True)
-        
     def page(self):
         btnWidget= self.sender()
         # PAGE HOME
@@ -101,14 +108,17 @@ class MainWindow(QMainWindow):
     def checkbox_function(self):
         if self.ui.checkBox.isChecked():  
             print("Checkbox is checked")
+            # self.ui.slider_brightness.setEnabled(True)
         else:
             print("Checkbox is unchecked")
+            # self.ui.slider_brightness.setDisabled(True)
     def button(self):
         if self.toogle:
             self.ui.lb_LED.setPixmap(QPixmap("led_on.png"))
             self.ui.btn_led.setIcon(QIcon("icons8-on.png"))
             self.ui.btn_led.setText("LED ON")
             self.ui.label_5.setText("Status LED: ON")
+            print("Value Idx for ComboBox: "+str(self.ui.comboBox.currentIndex()))
         else:
             self.ui.lb_LED.setPixmap(QPixmap("led_off.png"))
             self.ui.btn_led.setIcon(QIcon("icons8-off.png"))
